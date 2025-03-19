@@ -1,0 +1,16 @@
+.counter {
+    border: 1px solid #ccc;
+    padding: 10px;
+
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    button {
+        background-color: beige;
+
+    }
+}
