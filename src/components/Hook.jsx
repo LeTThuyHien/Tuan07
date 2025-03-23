@@ -34,7 +34,6 @@ function Hook() {
                 <div className="btn">
                     <button className="btn-click" onClick={handFocus}>Click</button>
                 </div>
-
             </div>
         </>
 
