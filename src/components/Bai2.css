@@ -22,8 +22,6 @@
 
 .list-todo {
     padding: 0;
-
-
     >li {
         list-style: none;
         width: 240px;
@@ -34,15 +32,10 @@
         display: flex;
         position: relative;
         margin-top: 10px;
-
-
-
         >a {
             text-decoration: none;
             color: black;
-
         }
-
     }
 }
 
@@ -53,10 +46,7 @@
     top: 10%;
     right: -40%;
     transform: translateX(50%);
-    
-
 }
 .btn-edit, .btn-delete {    
     background-color: beige;
-   
 }

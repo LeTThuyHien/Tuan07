@@ -46,7 +46,6 @@ function Bai2() {
                             <button className="btn-delete" onClick={() => handDelete(index)}>Xóa</button>
                         </div>
                     </li>
-
                 ))}
             </ul>
         </div>
