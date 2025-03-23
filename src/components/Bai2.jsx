@@ -2,11 +2,18 @@ import { useRef, useState } from "react";
 import "./Bai2.css";
 function Bai2() {
     const [todos, setTodo] = useState([]); // mảng lưu danh sách công việc
+    const [edit,setEdit] = useState(null)
     const inputRef = useRef(null);
     const handClickAdd = () => {
         const inputValue = inputRef.current.value.trim(); // lấy giá trị từ input
         if (inputValue) {  // nếu có giá trị thì thêm vào mảng
             setTodo((preTodo) => {
+                if(edit !== null){
+                    const editValue = [...preTodo];
+                    editValue[edit] = inputValue;
+                    setEdit(null);
+                    return editValue;
+                }
                 return [...preTodo, inputValue]; 
             });
         }
@@ -21,9 +28,7 @@ function Bai2() {
     }
     const handUpdate = (index) => {
         inputRef.current.value = todos[index];
-        setTodo((preTodo) => {
-            return preTodo.filter((todo, i) => i !== index);
-        });
+        setEdit(index);
     }
     return (
         <div className="todo">
